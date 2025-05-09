@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rcads-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.rcads-header {
+  margin-bottom: 24px;
+}
+
+.rcads-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background: #fafbfc;
+}
+
+.rcads-table th, .rcads-table td {
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.rcads-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.rcads-table td {
+  font-size: 1rem;
+}
+
+.rcads-table input[type="radio"] {
+  transform: scale(1.2);
+  margin: 0 4px;
+}
+
+@media (max-width: 700px) {
+  .rcads-container {
+    padding: 8px 2px;
+  }
+  .rcads-table th, .rcads-table td {
+    padding: 4px 2px;
+    font-size: 0.9rem;
+  }
+}
+
+.rcads-list {
+  margin-top: 24px;
+}
+
+.rcads-row {
+  display: flex;
+  align-items: center;
+  padding: 16px 10px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.rcads-row-alt {
+  background: #d9eece;
+}
+
+.rcads-question {
+  flex: 2;
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.rcads-number {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.rcads-options {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.rcads-option-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 16px;
+}
+
+.rcads-option-label input[type="radio"] {
+  display: none;
+}
+
+.rcads-option-text {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 6px 18px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+}
+
+.rcads-row-alt .rcads-option-text {
+  background: transparent;
+}
+
+.rcads-option-label input[type="radio"]:checked + .rcads-option-text {
+  border: 2.5px solid #4caf50;
+  background: #e6f9d7;
+  color: #256029;
+  outline: none;
+}
+
+.rcads-option-label input[type="radio"]:focus + .rcads-option-text {
+  box-shadow: 0 0 0 2px #a5d6a7;
+  border: 2.5px solid #388e3c;
+}
+
+@media (max-width: 700px) {
+  .rcads-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 2px;
+  }
+  .rcads-options {
+    gap: 12px;
+    margin-top: 8px;
+  }
+}
+
+.rcads-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 16px;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.rcads-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rcads-button:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+.rcads-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.rcads-button:active {
+  transform: scale(0.95);
+}
